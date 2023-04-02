@@ -1,0 +1,156 @@
+  @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+* {
+  margin:0;
+  padding: 0;
+}
+
+h1{
+  color: white;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.container {
+  width: 430px;
+  height: 100%;
+  display: block;
+  align-content:center ;
+  justify-content: center;
+  margin:0 auto;
+}
+
+/*Logo :) */
+.logo{
+  display: flex;
+  justify-content: center;
+  margin:8vh; 
+}
+
+/*Caixa com os Slider, botoe de bluetooth e botao de fone*/
+.box {
+  background-color: black;
+  width: 345px;
+  height: 200px;
+  padding: 42px;
+  padding-top: 52px;
+  border-radius: 10px;
+  display: block;
+  align-content: gap;
+}
+
+.brilho{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:35px;
+}
+
+#britness{
+  padding-right:12px
+  
+}
+
+.volume{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:35px;
+}
+
+#sound{
+  padding-right:17px;
+}
+
+.slider {
+  width: 100%;
+  height: 23px;
+  background: #ffffff;
+  outline: none;
+  transition: opacity .2s;
+  border-radius: 9px;
+}
+
+.slider:hover {
+  opacity: 2;
+}
+
+.slider::-webkit-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #11A5BF;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #11A5BF;
+  cursor: pointer;
+  
+}
+
+.iconbluefone {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+/*Botão de Iniciar Sessao*/
+.inicisessao{
+  display: grid;
+  place-items: center;
+}
+
+.btinicia{
+  height: 53px;
+  width: 220px;
+  border-radius: 10px;
+  background-color:#11A5BF;
+  color: white;
+  font-family: Mulish, san-serif;
+  font-size: 20px;
+  font-weight:900 ;
+  margin: 30px;
+  border: none;
+}
+
+.btinicia:active {
+  background-color: #BF085A;
+}
+
+/*Barra Inferior*/
+.barramenu {
+  background-color: black;
+  width: 430px;
+  height: 75px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Aqui foi usado um input de checkbox que eu tirei o quadrado e fiz a imagem virar o botao */
+.iconbluefone input:checked ~ svg path {
+  fill:#11A5BF;
+}
+
+.iconbluefone input{
+  display:none;
+}
+
+.barramenu input:checked ~ svg path {
+  fill:#11A5BF;
+}
+
+.barramenu input{
+  display:none;
+}
