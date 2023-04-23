@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+<script src="script.js"></script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CHROMA home</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="Icons/Logo.svg" type="image/icon type">
+</head>
+
+<body>
+  <div class="wrap wrap-qrcode">
+    <div class="containerQR">
+      <div class="logo">
+        <img src="Icons/Logo.svg"></img>
+      </div>
+      <div class="QRbox">
+        <button id="connect" class="btnConnect" type="button">Connect</button>
+      </div>
+      <div class="btprivacidadeiniciar">
+        <button class="btiniciasessao" onclick="location.href='menu.html'">Conectar</button>
+      </div>
+    </div>
+
+    <div class="modal-mask"></div>
+    <div class="modal">
+      <span class="popupQR" id="Qrcode">Oi, <output id="result"></output><br /><br>
+        Seja bem vinda ao <span class="fjalla">CHROMA</span>, esperamos que você possa curtir ao máximo a
+        experiência.<br /><br />
+        <p class="fjalla">APROVEITE!</p>
+        <div class="btprivacidadeiniciar">
+          <button class="btpopup">Fechar</button>
+        </div>
+      </span>
+    </div>
+  </div>
+</body>
+<script>
+  document.getElementById("result").innerHTML = localStorage.getItem("textvalue");
+
+  document.querySelector(".btpopup").addEventListener("click", function () {
+    document.querySelector(".modal").style.display = "none";
+    document.querySelector(".modal-mask").style.display = "none";
+  });
+
+  function PopQR() {
+    var popupQR = document.getElementById("Qrcode");
+    popupQR.classList.toggle("show");
+  };
+
+
+
+</script>
+
+<!--
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Chroma QRcode</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="Icons/Logo.svg" type="image/icon type">
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="containerQR">
+      <div class="logo">
+        <img src="Icons/Logo.svg"></img>
+      </div>
+      <div class="QRbox">
+        <div class="PopupQR" onclick="PopQR()">
+          <span class="popupQR" id="Qrcode">Oi, <output id="result"></output><br /><br>
+            Seja bem vinda ao <span class="fjalla">CHROMA</span>, esperamos que você possa curtir ao máximo a
+            experiência.<br /><br />
+            <p class="fjalla">APROVEITE!</p>
+            <div class="btprivacidadeiniciar">
+              <button class="btpopup">Fechar</button>
+            </div>
+          </span>
+        </div>
+        <button id="connect" type="button">Connect</button>
+      </div>
+      <div class="btprivacidadeiniciar">
+        <button class="btiniciasessao" onclick="location.href='index.html'">Conectar</button>
+      </div>
+    </div>
+    <div class="modal"></div>
+  </div>
+</body>
+<script>
+  document.getElementById("result").innerHTML = localStorage.getItem("textvalue");
+  document.querySelector(".btpopup").addEventListener("click", function () {
+    document.querySelector(".PopupQR").
+      style.display = "none";
+  });
+</script>
+
+</html>
+  -->
