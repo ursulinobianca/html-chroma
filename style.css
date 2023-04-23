@@ -9,6 +9,18 @@ h1{
   color: white;
 }
 
+.fjalla{
+  font-family: 'Fjalla One', sans-serif;
+}
+
+#result {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+u{
+  font-family: 'Mulish', sans-serif;
+}
+
 body {
   font-family: 'Mulish', sans-serif;
   height: 100%;
@@ -22,26 +34,85 @@ body {
   display: block;
   align-content:center ;
   justify-content: center;
+  text-align:center;
   margin:0 auto;
+  padding: 5px;
 }
 
-/*Logo :) */
+.return{
+  z-index: 3;
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  margin: 30px;
+  border: none;
+  background: none;
+}
+
+.TermosdeUso{
+  font-size: 16px;
+}
+
+/*Logos :) */
 .logo{
   display: flex;
   justify-content: center;
-  margin:8vh; 
+}
+
+.LogoGrande{
+  height: 50vh;
+  width: 50vh;
+}
+
+/*Caixa com o play e pause da música*/
+.caixamusica {
+  background-color: black;
+  width: 300px;
+  padding: 42px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 52px;
+  border-radius: 10px;
+  display: block;
+}
+
+.fotomusica {
+  background-color: white;
+  height: 180px;
+  padding: 42px;
+  border-radius: 10px;
+  display: grid;
+  align-items:center ;
+  justify-content: center;
+}
+
+.volume2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nomemusica {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin:10px;
 }
 
 /*Caixa com os Slider, botoe de bluetooth e botao de fone*/
 .box {
   background-color: black;
-  width: 345px;
-  height: 200px;
-  padding: 42px;
+  margin: 30px;
+  margin-top: 81px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding:20px;
   padding-top: 52px;
   border-radius: 10px;
   display: block;
   align-content: gap;
+  
 }
 
 .brilho{
@@ -53,7 +124,6 @@ body {
 
 #britness{
   padding-right:12px
-  
 }
 
 .volume{
@@ -68,6 +138,7 @@ body {
 }
 
 .slider {
+  -webkit-appearance: none;
   width: 100%;
   height: 23px;
   background: #ffffff;
@@ -80,7 +151,8 @@ body {
   opacity: 2;
 }
 
-.slider::-webkit-range-thumb {
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -94,7 +166,6 @@ body {
   border-radius: 50%;
   background: #11A5BF;
   cursor: pointer;
-  
 }
 
 .iconbluefone {
@@ -102,40 +173,6 @@ body {
   align-items: center;
   justify-content: space-evenly;
   padding: 20px;
-}
-
-/*Botão de Iniciar Sessao*/
-.inicisessao{
-  display: grid;
-  place-items: center;
-}
-
-.btinicia{
-  height: 53px;
-  width: 220px;
-  border-radius: 10px;
-  background-color:#11A5BF;
-  color: white;
-  font-family: Mulish, san-serif;
-  font-size: 20px;
-  font-weight:900 ;
-  margin: 30px;
-  border: none;
-}
-
-.btinicia:active {
-  background-color: #BF085A;
-}
-
-/*Barra Inferior*/
-.barramenu {
-  background-color: black;
-  width: 430px;
-  height: 75px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
 }
 
 /* Aqui foi usado um input de checkbox que eu tirei o quadrado e fiz a imagem virar o botao */
@@ -153,4 +190,488 @@ body {
 
 .barramenu input{
   display:none;
+}
+
+/*Botão de Iniciar Sessao*/
+.inicisessao{
+  display: grid;
+  place-items: center;
+}
+
+.btiniciasessaoMenu{
+  height: 53px;
+  width: 220px;
+  border-radius: 10px;
+  background-color:#11A5BF;
+  color: white;
+  font-family: Mulish, san-serif;
+  font-size: 20px;
+  font-weight:900 ;
+  margin: 30px;
+  margin-bottom: 58px;
+  border: none;
+  text-align: center;
+}
+
+.btiniciasessaoMenu:active {
+  background-color: #BF085A;
+}
+
+.btiniciasessao{
+  height: 53px;
+  width: 220px;
+  border-radius: 10px;
+  background-color:#11A5BF;
+  color: white;
+  font-family: Mulish, san-serif;
+  font-size: 20px;
+  font-weight:900 ;
+  margin: 30px;
+  border: none;
+  text-align: center;
+}
+
+.btiniciasessao:active {
+  background-color: #BF085A;
+}
+
+/*Barra Inferior*/
+.barramenu {
+  background-color: black;
+  width: 100%;
+  height: 75px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#btcomentario{
+  border: none;
+  background: none;
+}
+
+#btsaida{
+  border: none;
+  background: none;
+}
+
+#btEntrar{
+  border: none;
+  background: none;
+  margin-top: 34px;
+}
+
+#btsaida:active{
+  color:#11A5BF;
+}
+
+/*Pagina inicial*/
+.entradacontainer{
+  text-align: center;
+}
+/*background: -webkit-linear-gradient(,, );*/
+.reconcores {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 900;
+  margin-bottom: 62px;
+  background-image: linear-gradient(45deg, #BF085A, #74103D,#11A5BF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*ENTRAR*/
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: 30px;
+}
+
+/* Corpo do Popup Termos de Uso 
+.popup .popuptext {
+  visibility: hidden;
+  font-family: 'Muslish', sans-serif;
+  font-weight: 500;
+  left:0;
+  right:0;
+  width: 100%;
+  height: 200px;
+  padding: 14px;
+  margin:0 auto;
+  line-height: 25px;
+  background-color: #74103D;
+  color: #fff;
+  text-align: left;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 2;
+  align-items: center;
+  align-content: center;
+  overflow-y: scroll;
+}
+*/
+
+/* Toggle this class - hide and show the popup */
+.modalEntrar{
+  display: none;
+  background-color: #74103D;
+  width: 300px;
+  height: 200px;
+  font-weight: 500;
+  position: absolute;
+  line-height: 25px;
+  top: 50%;
+  left: 50%;
+  text-align: left;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+.modalEntrar-mask{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.651);
+  overflow-y: scroll;
+}
+
+.cbTermos{
+  border-radius: 10px;
+  size: 40px;
+  margin-right: 10px;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+.Nomecontainer {
+  display: grid;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.txNome {
+  height: 38px;
+  width: 261px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 18px;
+  font-family: 'Mulish', sans-serif;
+  border-radius: 10px;
+  border-color: #BF085A;
+  box-shadow: none;
+}
+
+.text ::placeholder{
+  text-align: center;
+}
+
+.btprivacidadeiniciar {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*Aba de QRCODE*/
+.containerQR {
+  width: 430px;
+  height: 100%;
+  display: block;
+  align-content:center ;
+  justify-content: center;
+  margin:0 auto;
+}
+
+
+.QRbox {
+  border-style: solid;
+  border-color: black;
+  border-width: 10px;
+  border-radius: 10px;
+  height: 220px;
+  padding: 42px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+
+.popupQR {
+  color: white;
+}
+
+.btpopup{
+  background-color: transparent;
+  border:1px solid white;
+  border-radius: 10px;
+  padding: 14px;
+  color: white;
+  font-family: 'Mulish',sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  margin-top: 30px;
+}
+
+.btpopup:active{
+  color: #11A5BF;
+  border:1px solid #11A5BF;
+}
+
+.btpopupN{
+  background-color: transparent;
+  border:1px solid white;
+  border-radius: 10px;
+  padding: 16px;
+  color: white;
+  font-family: 'Mulish',sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  margin-top: 30px;
+}
+.btpopupN:active{
+  color: #11A5BF;
+  border:1px solid #11A5BF;
+}
+
+
+
+/*comentários*/
+.Comentario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:30px;
+}
+
+.comenta{
+  height: 200px;
+  width: 261px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 18px;
+  font-family: 'Mulish', sans-serif;
+  border-radius: 10px;
+  border-color: #BF085A;
+  box-shadow: none;
+}
+
+/*Mapastrajetos*/
+
+.trajetos{
+  display:grid;
+  text-align:center;
+}
+
+.iconverao{
+  margin-right: 10px;
+}
+.iconoutono{
+  margin-right: 10px;
+}
+.iconinverno{
+  margin-right: 10px;
+}
+.iconprimavera{
+  margin-right: 10px;
+}
+
+.btverao{
+  height: 53px;
+  border-radius: 10px;
+  background-color:#11A5BF;
+  color: white;
+  font-family: Mulish, san-serif;
+  font-size: 20px;
+  font-weight:900 ;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 32px;
+  border: none;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.btverao:active{
+  background-color:#BF085A ;
+}
+
+.btoutono{
+  height: 53px;
+  border-radius: 10px;
+  background-color:#11A5BF;
+  color: white;
+  font-family: Mulish, san-serif;
+  font-size: 20px;
+  font-weight:900 ;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 32px;
+  border: none;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.btoutono:active{
+  background-color:#BF085A ;
+}
+
+.btprimavera{
+  height: 53px;
+  border-radius: 10px;
+  background-color:#11A5BF;
+  color: white;
+  font-family: 'Mulish', san-serif;
+  font-size: 20px;
+  font-weight:900 ;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 32px;
+  border: none;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.btprimavera:active{
+  background-color:#BF085A ;
+}
+
+.btinverno{
+  height: 53px;
+  border-radius: 10px;
+  background-color:#11A5BF;
+  color: white;
+  font-family: Mulish, san-serif;
+  font-size: 20px;
+  font-weight:900 ;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 32px;
+  border: none;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.btinverno:active{
+  background-color:#BF085A ;
+}
+
+/*Sair*/
+.popupSair {
+  visibility: visible;
+  font-weight: 500;
+  width: 300px;
+  padding: 14px;
+  margin:0 auto;
+  line-height: 25px;
+  background-color: #74103D;
+  color: #fff;
+  text-align: left;
+  border-radius: 10px;
+  z-index: 2;
+  align-items: center;
+  align-content: center;
+}
+
+.boxbtyn{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btsair{
+  font-family: 'Mulish',sans-serif;
+  font-size: 20px;
+  border: none;
+  color: white;
+  background-color: none;
+}
+
+/* Código do ModalSair*/
+.modalSair {
+  display: none;
+  background-color: #74103D;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border-radius: 10px;
+}
+.modalSair-mask{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.651);
+}
+
+
+/* -- Código do ModalQR -- */
+.wrap{
+  position: relative;
+  height: 100vh;
+}
+.wrap-qrcode{
+  display: grid;
+  place-content: center;
+}
+.modal {
+  background-color: #74103D;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border-radius: 10px;
+}
+.modal-mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.651);
+}
+
+.btnConnect{
+  display: block;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #dadada;
+  box-shadow: 0px 3px 6px 0px #00000027;
+  padding: 15px 40px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-family: Mulish, san-serif;
+  font-weight: bold;
+  cursor: pointer;
 }
