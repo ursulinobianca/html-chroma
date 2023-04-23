@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+<script src="script.js"></script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Chroma Entrar</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="Icons/Logo.svg" type="image/icon type">
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container">
+      <div class="logo">
+        <img class="LogoGrande" src="Icons/Logo.svg"></img>
+      </div>
+      <form class="Nomecontainer" action="qrcode.html">
+        <input type="text" placeholder="Nome" class="txNome" id="inNome"></input>
+        <button type="button" id="btEntrar" onclick="PopEntrar()"><u class="TermosdeUso">TERMOS DE PRIVACIDADE</u>
+        </button>
+        <div class="fundo"></div>
+        <div class="btprivacidadeiniciar">
+          <button type="submit" class="btiniciasessao" onclick="Nome()">Entrar</button>
+        </div>
+      </form>
+    </div>
+    <div class="modalEntrar-mask"></div>
+    <div class="modalEntrar">
+      <span class="popupQR" id="Qrcode"><b>1. Informações gerais</b><br />
+        A Política de Privacidade contém informações a respeito do modo como tratamos, total ou parcialmente, de forma
+        automatizada ou não, os dados pessoais dos usuários que acessam nosso aplicativo. Seu objetivo é esclarecer os
+        interessados acerca dos tipos de dados que são coletados, dos motivos da coleta e da forma como o usuário
+        poderá atualizar, gerenciar ou excluir estas informações. Essa política foi elaborada conforme a Lei Federal
+        nº 13.709/2018 (Lei de Proteção de Dados Pessoais).<br /><br />
+        <b>2. Direitos do usuário</b><br />
+        O aplicativo se compromete a cumprir as normas previstas no RGPD (Regulamento Geral de Proteção de Dados), em
+        respeito aos seguintes princípios: <br />
+        Os dados do usuário serão processados de forma lícita e transparente. Os dados pessoais do usuário serão
+        coletados apenas para finalidades determinadas, explícitas e legítimas, não podendo ser tratados
+        posteriormente de uma forma incompatível com essas finalidades.
+        Os dados pessoais do usuário serão conservados de uma forma que permita a identificação dos titulares dos
+        dados apenas durante o período necessário para as finalidades para as quais são tratados.
+        Os dados pessoais do usuário serão tratados de forma segura, protegidos do tratamento não autorizados.
+        Os dados pessoais do usuário serão apagados assim que ele se desligar do dispositivo.<br /><br />
+        <b>3. Política de dados</b> <br />
+        O que coletaremos Coletaremos dados de identificação do usuário, para a realização do cadastro e ordem em que
+        acessou a exposição.
+        Os seguintes dados serão coletados: <br />
+        Nome;<br />
+        Ordem das obras acessadas.<br /><br />
+        O que não coletaremos:<br />
+        Não serão coletados dados sensíveis do usuário, dados definidos nos artigos 9º e 10ª do RGPD e nos artigos 11ª
+        e seguintes da Lei de Proteção de Dados Pessoais. Assim os seguintes dados não serão coletados:
+        Dados que revelem a origem racial ou étnica, as opiniões políticas, as convicções religiosas ou filosóficas,
+        ou a filiação sindical dos usuários;
+        Dados genéticos;<br />
+        Dados biométricos para identificar uma pessoa de forma inequívoca; <br />
+        Dados relativos à saúde do usuário;<br />
+        Dados relativos à vida sexual ou à orientação sexual do usuário;<br />
+        Dados relacionados a condenações penais ou a infrações ou com medidas de segurança conexas. <br /><br />
+        <b>4. Não fornecer dados de terceiros</b> <br />
+        Durante o uso do aplicativo, a fim de proteger os direitos de terceiros, o usuário deverá fornecer apenas seus
+        dados pessoais e não o de terceiros.<br /><br />
+        <b>5. Medidas de segurança</b><br />
+        Levamos a sua privacidade a sério e tomamos todas as medidas e precauções para proteger seus dados. Temos
+        medidas de segurança incluindo: criptografia, restrição de acesso, firewalls, etc. No entanto, o aplicativo se
+        exime de reponsabilidade por culpa exclusiva de terceiros, como em caso de ataques de hackers ou crackers, ou
+        culpa exclusiva do usuário, como no caso em que ele mesmo transfere seus dados a um terceiro. <br /><br />
+        <b>6. Autorizações</b><br />
+        Esse aplicativo necessita da autorização para o uso do autofalante (para o uso de fones de ouvido), da câmera
+        (para a leitura do QR code) e do Bluetooth (para a conexão)<br /><br />
+
+        <div class="boxbtyn">
+          <input type="checkbox" class="cbTermos"></input>
+          <p>Li e estou de acordo com os Termos de Uso e Política de Privacidade</p>
+        </div>
+        <div class="boxbtyn">
+          <button class="btpopup">Aceitar</button>
+          <button class="btpopupN">Recusar</button>
+        </div>
+
+      </span>
+    </div>
+  </div>
+  <script>
+    document.querySelector(".btpopupN").addEventListener("click", function () {
+      document.querySelector(".modalEntrar").style.display = "none";
+      document.querySelector(".modalEntrar-mask").style.display = "none";
+    });
+
+    document.querySelector(".btpopup").addEventListener("click", function () {
+      document.querySelector(".modalEntrar").style.display = "none";
+      document.querySelector(".modalEntrar-mask").style.display = "none";
+    });
+
+
+    function PopEntrar() {
+      document.querySelector(".modalEntrar").style.display = "grid";
+      document.querySelector(".modalEntrar-mask").style.display = "grid";
+    };
+  </script>
+</body>
+
+</html>
