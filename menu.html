@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CHROMA home</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="Icons/Logo.svg" type="image/icon type">
+</head>
+
+<body>
+  <div class="wrap">
+    <script src="script.js"></script>
+    <div class="container">
+      <!--Logo-->
+      <div class="logo">
+        <img src="Icons/Logo.svg"></img>
+      </div>
+      <!--Caixa opções-->
+      <div class="box">
+        <div class="brilho">
+          <img id="britness" src="Icons/britness.svg"></img>
+          <input type="range" min="0" max="100" value="50" class="slider" id="myRange"></input>
+        </div>
+        <div class="volume">
+          <img id="sound" src="Icons/sound.svg"></img>
+          <input type="range" min="0" max="100" value="50" class="slider" id="barrasound" /></input>
+        </div>
+        <div class="iconbluefone">
+          <label>
+            <input type="checkbox" id="cbbluetooth" />
+            <svg width="27" height="42" viewBox="0 0 27 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.19779 0C8.18481 0 7.36364 0.821177 7.36364 1.83415V13.125L5.14267 10.7498C4.35221 9.90445 3.01143 9.90445 2.22097 10.7498L1.27729 11.759C0.558419 12.5278 0.558418 13.7222 1.27729 14.491L7.36364 21L1.27729 27.509C0.558418 28.2778 0.558418 29.4722 1.27729 30.241L2.22097 31.2502C3.01143 32.0956 4.35221 32.0956 5.14267 31.2502L7.36364 28.875V40.1659C7.36364 41.1788 8.18481 42 9.19779 42C9.60019 42 9.99142 41.8677 10.3112 41.6234L24.8678 30.5038C25.9313 29.6914 25.9123 28.084 24.83 27.2969L15.9545 20.8425L24.7566 14.6925C25.8666 13.9169 25.9012 12.2857 24.8252 11.4637L10.3112 0.376604C9.99142 0.132333 9.60019 0 9.19779 0ZM12.2727 7.875L19.6364 13.125L12.2727 18.375V7.875ZM12.2727 23.625L19.6364 28.875L12.2727 34.125V23.625Z"
+                fill="white" />
+            </svg>
+
+          </label>
+          <label>
+            <input type="checkbox" id="cbheadset" />
+            <svg width="46" height="42" viewBox="0 0 46 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.6954 0C13.3335 0 5.67385 8.1 5.67385 18V24H2.83692C2.08452 24 1.36294 24.3161 0.830916 24.8787C0.298889 25.4413 0 26.2043 0 27L0 39C0 39.7957 0.298889 40.5587 0.830916 41.1213C1.36294 41.6839 2.08452 42 2.83692 42H8.51077C9.26317 42 9.98475 41.6839 10.5168 41.1213C11.0488 40.5587 11.3477 39.7957 11.3477 39V18C11.3477 11.34 16.3974 6 22.6954 6C28.9934 6 34.0431 11.34 34.0431 18V39C34.0431 39.7957 34.342 40.5587 34.874 41.1213C35.406 41.6839 36.1276 42 36.88 42H42.5538C43.3062 42 44.0278 41.6839 44.5599 41.1213C45.0919 40.5587 45.3908 39.7957 45.3908 39V27C45.3908 26.2043 45.0919 25.4413 44.5599 24.8787C44.0278 24.3161 43.3062 24 42.5538 24H39.7169V18C39.7169 8.1 32.0572 0 22.6954 0Z"
+                fill="white" />
+            </svg>
+          </label>
+        </div>
+      </div>
+
+      <!--Botão Iniciar-->
+      <div class="inicisessao">
+        <button class="btiniciasessaoMenu" onclick="location.href='musica.html'">INICIAR SESSÃO</button>
+      </div>
+
+      <!--Menu inferior-->
+      <div class="barramenu">
+        <div>
+          <button type="button" id="btsaida" onclick="PopSair()">
+            <svg width="35" height="30" viewBox="0 0 35 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.8571 0C13.3049 0 12.8571 0.447715 12.8571 1V3.28571C12.8571 3.838 13.3049 4.28571 13.8571 4.28571H30V25.7143H13.8571C13.3049 25.7143 12.8571 26.162 12.8571 26.7143V29C12.8571 29.5523 13.3049 30 13.8571 30H33.2857C33.838 30 34.2857 29.5523 34.2857 29V1C34.2857 0.447716 33.838 0 33.2857 0H13.8571ZM8.57143 10.5714C8.57143 9.74738 7.63067 9.277 6.97143 9.77143L1.06667 14.2C0.533333 14.6 0.533334 15.4 1.06667 15.8L6.97143 20.2286C7.63067 20.723 8.57143 20.2526 8.57143 19.4286V17.1429H24.7143C25.2666 17.1429 25.7143 16.6951 25.7143 16.1429V13.8571C25.7143 13.3049 25.2666 12.8571 24.7143 12.8571H8.57143V10.5714Z"
+                fill="white" />
+          </button>
+          </svg>
+        </div>
+        <div>
+          <a href="mapastrajeto.html">
+            <input type="checkbox" id="cbclocal" />
+            <svg width="23" height="30" viewBox="0 0 23 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.25 0C5.025 0 0 5.025 0 11.25C0 17.6189 8.11245 26.6919 10.5595 29.2838C10.9386 29.6853 11.5614 29.6853 11.9405 29.2838C14.3875 26.6919 22.5 17.6189 22.5 11.25C22.5 5.025 17.475 0 11.25 0ZM11.25 3.75C15.4125 3.75 18.75 7.125 18.75 11.25C18.75 15.4125 15.4125 18.75 11.25 18.75C7.125 18.75 3.75 15.4125 3.75 11.25C3.75 7.125 7.125 3.75 11.25 3.75Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+        <div>
+          <input type="checkbox" id="cbcomentario" />
+          <svg width="35" height="29" viewBox="0 0 35 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1.5 0C0.947714 0 0.5 0.447715 0.5 1V19.0144C0.5 19.9053 1.57714 20.3514 2.20711 19.7215L4.78571 17.1429H8.07143C8.62371 17.1429 9.07143 16.6951 9.07143 16.1429V4.28571H20.9286C21.4809 4.28571 21.9286 3.838 21.9286 3.28571V1C21.9286 0.447715 21.4809 0 20.9286 0H1.5ZM14.3571 8.57143C13.8049 8.57143 13.3571 9.01914 13.3571 9.57143V24.7143C13.3571 25.2666 13.8049 25.7143 14.3571 25.7143H30.5L33.0786 28.2929C33.7086 28.9229 34.7857 28.4767 34.7857 27.5858V9.57143C34.7857 9.01914 34.338 8.57143 33.7857 8.57143H14.3571Z"
+              fill="white" />
+          </svg>
+        </div>
+      </div>
+
+    </div>
+    <div class="modalSair-mask"></div>
+    <div class="modalSair">
+      <span class="popupQR" id="Qrcode">Olá, <span id="result"></span><br /> <br />
+        Esperamos que tenha aproveitado a experiência! <span class="fjalla">CHROMA!</span><br />
+        Tem certeza que deseja sair?<br />
+        <p class="fjalla">VOLTE SEMPRE!</p>
+        <div class="boxbtyn">
+          <button class="btpopup" onclick="location.href='index.html'">Sim</button>
+          <button class="btpopupN">Não</button>
+        </div>
+      </span>
+    </div>
+  </div>
+</body>
+
+<script>
+
+  //Sliders
+  var sliderl = document.getElementById("myRange").oninput = function slidbrigth() {
+
+    var value = (this.value - this.min) / (this.max - this.min) * 100
+
+    this.style.background = 'linear-gradient(to right, #BF085A 0%' + value + '%, #fff ' + value + '%,#fff 100%)'
+  }
+  var sliders = document.getElementById("barrasound").oninput = function slidsound() {
+    var value = (this.value - this.min) / (this.max - this.min) * 100
+
+    this.style.background = 'linear-gradient(to right, #BF085A 0%' + value + '%, #fff ' + value + '%,#fff 100%)'
+  }
+
+  //POPUP SAIR
+  document.querySelector(".btpopupN").addEventListener("click", function () {
+    document.querySelector(".modalSair").style.display = "none";
+    document.querySelector(".modalSair-mask").style.display = "none";
+  });
+
+
+  function PopSair() {
+    document.querySelector(".modalSair").style.display = "grid";
+    document.querySelector(".modalSair-mask").style.display = "grid";
+  };
+
+  //Nome do usuário
+  document.getElementById("result").innerHTML = localStorage.getItem("textvalue");
+</script>
+
+</html>
